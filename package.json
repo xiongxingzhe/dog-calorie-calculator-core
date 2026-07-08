@@ -1,0 +1,12 @@
+{
+  "name": "dog-calorie-calculator-core",
+  "version": "0.1.0",
+  "description": "Core calorie calculation logic for dogs (RER/DER). Built by pawsandpounds.com.",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": { "build": "tsc -p tsconfig.json" },
+  "devDependencies": { "typescript": "^5.7.3" }
+}
