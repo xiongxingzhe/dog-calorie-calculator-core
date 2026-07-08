@@ -1,5 +1,7 @@
 # Dog Calorie Calculator Core
 
+[![CI](https://github.com/xiongxingzhe/dog-calorie-calculator-core/actions/workflows/ci.yml/badge.svg)](https://github.com/xiongxingzhe/dog-calorie-calculator-core/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 TypeScript utilities for dog calorie planning with RER baseline and pragmatic DER multipliers.
 
 Built by [pawsandpounds.com](https://pawsandpounds.com).
