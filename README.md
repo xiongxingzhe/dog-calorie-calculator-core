@@ -1,13 +1,56 @@
 # Dog Calorie Calculator Core
 
-Core TypeScript helpers for dog calorie planning using RER and simple DER multipliers.
+TypeScript utilities for dog calorie planning with RER baseline and pragmatic DER multipliers.
 
 Built by [pawsandpounds.com](https://pawsandpounds.com).
 
-## Includes
+## Installation
 
-- `rerKg(kg)`
-- `dailyDogCalories(kg, profile)`
+```bash
+npm install dog-calorie-calculator-core
+```
+
+## Quick Start
+
+```ts
+import { rerKg, dailyDogCalories } from "dog-calorie-calculator-core"
+
+const rer = rerKg(18) // baseline kcal/day
+
+const maintenance = dailyDogCalories(18, {
+  neutered: true,
+  activeLevel: "moderate",
+})
+
+const weightLoss = dailyDogCalories(18, {
+  neutered: true,
+  activeLevel: "moderate",
+  goal: "weight_loss",
+})
+```
+
+## API
+
+### `rerKg(kg: number): number`
+Returns resting energy requirement baseline using `70 * kg^0.75`.
+
+### `dailyDogCalories(kg: number, profile: DogProfile): number`
+Returns rounded daily kcal target.
+
+`DogProfile`:
+
+```ts
+type DogProfile = {
+  neutered: boolean
+  activeLevel: "low" | "moderate" | "high"
+  goal?: "maintenance" | "weight_loss"
+}
+```
+
+## Notes
+
+- Multipliers are intentionally simple for app-layer planning logic.
+- Use veterinary guidance for disease states, puppies, pregnancy, or lactation.
 
 ## License
 
